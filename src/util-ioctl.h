@@ -25,3 +25,9 @@ int GetIfaceMTU(const char *pcap_dev);
 int GetIfaceMaxPacketSize(const char *pcap_dev);
 int GetIfaceOffloading(const char *pcap_dev);
 int GetIfaceRSSQueuesNum(const char *pcap_dev);
+
+int GetIfaceFlags(const char *ifname);
+int SetIfaceFlags(const char *ifname, int flags);
+#ifdef SIOCGIFCAP
+int GetIfaceCaps(const char *ifname);
+#endif
